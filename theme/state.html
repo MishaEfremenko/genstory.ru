@@ -1,0 +1,61 @@
+{%include 'menu.html'%}
+<div class="wrapper">
+        <h1 style="color:white;">{{state['header']}}</h1>
+            <div>
+                <div class="state-text">
+                    {{state['text']}}
+                </div>
+                <img src="/{{state['img']}}" alt="">
+            </div>
+        </div>
+        <style>
+            body{
+                margin: 0;
+                padding: 0;
+                background: linear-gradient(45deg, rgb(133, 133, 133), rgba(0, 0, 0, 0.575)); 
+            }
+            .wrapper{
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                justify-content: center;
+                
+            }
+            .wrapper>div{
+                background: linear-gradient(45deg, rgb(121, 84, 255), rgba(0, 0, 0, 0.575)); 
+                width: 60%;
+                text-align: center;
+                margin: 1%;
+                border-radius: 10px;
+                border: 1px solid rgb(0, 0, 0);
+                box-shadow: 0 0 10px rgb(0, 0, 0);
+                display: flex;
+                flex-direction: row;
+            }
+            .wrapper>div>.state-text{
+                margin: 1%;
+                width: 48%;
+                color: white;
+                font-size: 2em;
+            }
+            .wrapper>div>img{
+                margin: 1%;
+                width: 28%;
+                border-radius: 15px;
+                height: auto;
+            }
+            .wrapper>.tostate{
+                width: 20%;
+                text-align: center;
+                display: inline;
+                background: linear-gradient(45deg, rgb(0, 0, 0), rgba(0, 0, 0, 0.575)); 
+                box-shadow: 0 0 10px rgb(0, 0, 0);
+                color: white;
+                margin-top: 0%;
+                font-weight: bold;
+            }
+            .tostate>a{
+                color:white;
+                text-decoration: none;
+            }
+        </style>

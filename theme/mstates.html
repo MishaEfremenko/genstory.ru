@@ -1,0 +1,65 @@
+<div class="wrapper">
+<h1 style="color:white;">Статьи</h1>
+    {% for state in states %}
+    <div>
+        <img src="/{{state['img']}}" alt="">
+        <div class="state-text">
+            {{state['header']}}
+        </div>
+    </div>
+    <div class="tostate">
+        <a href="/state/{{state['href']}}">Подробнее</a> 
+    </div>
+    {% endfor %}
+</div>
+<style>
+    body{
+        margin: 0;
+        padding: 0;
+    }
+    .wrapper{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        background: linear-gradient(45deg, rgb(133, 133, 133), rgba(0, 0, 0, 0.575)); 
+    }
+    .wrapper>div{
+        background: linear-gradient(45deg, rgb(121, 84, 255), rgba(0, 0, 0, 0.575)); 
+        width:100%;
+        text-align: center;
+        margin: 1%;
+        border-radius: 10px;
+        border: 1px solid rgb(0, 0, 0);
+        box-shadow: 0 0 10px rgb(0, 0, 0);
+        display: flex;
+        flex-direction: column;
+    }
+    .wrapper>div>.state-text{
+        margin: 1%;
+        width: 98%;
+        color: white;
+        font-size: 2em;
+    }
+    .wrapper>div>img{
+        margin: 1%;
+        width: 98%;
+        border-radius: 15px;
+    }
+    .wrapper>.tostate{
+        width: 98%;
+        text-align: center;
+        display: inline;
+        background: linear-gradient(45deg, rgb(0, 0, 0), rgba(0, 0, 0, 0.575)); 
+        box-shadow: 0 0 10px rgb(0, 0, 0);
+        color: white;
+        margin-top: 0%;
+        font-weight: bold;
+        font-size: 3em;
+    }
+    .tostate>a{
+        color:white;
+        text-decoration: none;
+        width: 100%;
+    }
+</style>
